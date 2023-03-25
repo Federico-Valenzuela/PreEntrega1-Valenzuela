@@ -1,15 +1,16 @@
-import { hover } from '@testing-library/user-event/dist/hover'
 import React from 'react'
+import {  CartWidget} from "../CartWidget";
 
 
 export const NavBarComponent = ({clickEvent}) => {
 
-  const styles1 = {
-    display: "flex",
-    justifyContent: "center",
-    fontSize: "50px",
-    backgroundColor: "green",
-  }
+   const styles1 = {
+     display: "flex",
+    //  justifyContent: "center",
+     fontSize: "16px",
+     backgroundColor: "green",
+     justifyContent: "right"
+   }
   const styles2 = {
     display: "flex",
     flex:"inline",
@@ -35,17 +36,26 @@ export const NavBarComponent = ({clickEvent}) => {
 
 
   return (
-    <header>
-      <div style={styles1}>Red Electro</div>
+    <div>
+      {/* <div style={styles1}>Red Electro</div> */}
       <div>
+      <ul style={styles1}>
+        <li style={styles3} onClick={clickEvent} >
+            <a href=""><CartWidget />
+            </a>
+          </li>
+        </ul>
         <ul style={styles2}>
           <li style={styles3} onClick={clickEvent} >lavarropas</li>
           <li style={styles3} onClick={clickEvent} >cocina</li>
           <li style={styles3} onClick={clickEvent} >heladera</li>
           <li style={styles3} onClick={clickEvent} >herramientas</li>
+          
         </ul>
+        
+        
       </div>
-    </header>
+    </div>
     
   );
 }

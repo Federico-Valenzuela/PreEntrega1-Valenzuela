@@ -1,6 +1,7 @@
 import "./App.css"
 //import {ButtonComponent} from "./components";
  import { MainLayout} from "./layouts";
+ import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
 
@@ -9,12 +10,12 @@ function App() {
 
 
   return (
-    <MainLayout>
-      <div>
-      
-      
-      </div>
-    </MainLayout>
+    <>
+    
+    <MainLayout/>
+    <ItemListContainer/>
+    </>
+    
     
   );
 }

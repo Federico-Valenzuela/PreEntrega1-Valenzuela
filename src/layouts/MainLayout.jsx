@@ -4,9 +4,9 @@ import { NavBarComponent } from "../components";
 export const MainLayout = ({children}) => {
 
     const styles = {
-        height: "150px",
-        backgroundColor: "black",
-        color: "white",
+        
+         backgroundColor: "black",
+         color: "white",
        
         
         
@@ -17,6 +17,7 @@ export const MainLayout = ({children}) => {
     return (
         
         <div style={styles}>
+            <h1 style={styles}>Red-Electro</h1>
             <NavBarComponent clickEvent={() =>console.log("redireccionar a pagina")}/>
              {children}
         </div>
